@@ -9,7 +9,7 @@ mongoose.connect(connectionString, {
     useUnifiedTopology: true
 });
 
-// Connection
+// Connections
 mongoose.connection.on('connected',() => {
     console.log('Connected to MongoDB');
 });
