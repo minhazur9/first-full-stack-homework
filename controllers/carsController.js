@@ -7,7 +7,12 @@ const db = require('../models');
 
 
 router.get('/',(req,res) => {
-    res.render('cars/indexCar');
+    db.Car.find({},(err,allCars) => {
+        if(err) return console.log(err);
+        res.render('cars/indexCar', {
+            cars: allCars,
+        })
+    })
 })
 
 module.exports = router;

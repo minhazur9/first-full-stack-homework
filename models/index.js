@@ -17,3 +17,7 @@ mongoose.connection.on('connected',() => {
 mongoose.connection.on('error',() => {
     console.log('Connection Failed');
 });
+
+module.exports = {
+    Car: require('./Car')
+}
