@@ -24,22 +24,26 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
     db.Car.create(req.body, (err, createdCar) => {
         if (err) return console.log(err);
-        res.redirect(`/cars`);
+        res.redirect(`/cars/${createdCar._id}`);
     })
 })
 
 //Show Cars
-router.get('/:carId', (req,res) => {
-    db.Car.findById(req.params.carId, (err,foundCar) => {
-        if(err) return console.log(err);
-        res.render(`cars/showCar`,{
+router.get('/:carId', (req, res) => {
+    db.Car.findById(req.params.carId, (err, foundCar) => {
+        if (err) return console.log(err);
+        res.render('cars/showCar', {
             car: foundCar
         })
-    }); 
+    });
 });
 
-// db.Car.deleteMany({},(err,f) => {
-    
-// });
+// Delete Cars
+router.delete('/:carId', (req, res) => {
+    db.Car.findByIdAndDelete(req.params.carId, (err, deletedCar) => {
+        if (err) return console.log(err);
+        res.redirect('/cars');
+    })
+})
 
 module.exports = router;
