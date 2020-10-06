@@ -53,9 +53,18 @@ router.get('/:carId/edit', (req, res) => {
             car: foundCar,
         });
     })
-
-
 });
 
+// Update Cars
+router.put('/:carId', (req, res) => {
+    db.Car.findByIdAndUpdate(
+        req.params.carId,
+        req.body,
+        { new: true },
+        (err, foundCar) => {
+            if (err) return console.log(err);
+            res.redirect(`/cars/${foundCar._id}`)
+        })
+})
 
 module.exports = router;
