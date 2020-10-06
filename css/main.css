@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+img{
+    max-width: 40%;
+    display: block;
+    margin-top: 10px;
+}

@@ -38,4 +38,8 @@ router.get('/:carId', (req,res) => {
     }); 
 });
 
+// db.Car.deleteMany({},(err,f) => {
+    
+// });
+
 module.exports = router;

@@ -11,6 +11,9 @@ app.set('view engine', 'ejs');
 // Controllers
 const carsCtrl = require('./controllers/carsController');
 
+//CSS
+app.use(express.static(__dirname + '/css'));
+
 // Middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
