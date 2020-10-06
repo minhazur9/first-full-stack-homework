@@ -46,4 +46,16 @@ router.delete('/:carId', (req, res) => {
     })
 })
 
+// Edit Route
+router.get('/:carId/edit', (req, res) => {
+    db.Car.findById(req.params.carId, (err, foundCar) => {
+        res.render('cars/editCar', {
+            car: foundCar,
+        });
+    })
+
+
+});
+
+
 module.exports = router;
