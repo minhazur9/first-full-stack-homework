@@ -1,10 +1,37 @@
-*{
+* {
     box-sizing: border-box;
-    font-size: 20px;
 }
 
-img{
+body {
+    background-color: #094086 !important;
+    min-height: 100vh;
+    color:white !important
+}
+
+input {
+    background-color:black;
+    border-radius: 5px;
+    min-height: 35px;
+    min-width: 40px;
+}
+
+
+li {
+    display: inline;
+}
+
+
+
+h1 {
+    margin-left: 10px;
+}
+
+img {
     max-width: 40%;
     display: block;
     margin-top: 10px;
+}
+
+.submit-button {
+    display:inline;
 }

@@ -14,11 +14,11 @@
     <h3><strong>Year:</strong> <%= car.year %></h3>
     <h3><strong>Price:</strong> $<%= car.price %></h3>
     <form action="/cars/<%= car._id %>/edit" method='GET'>
-        <input type="submit" value="Edit">
+        <input class="submit-button" type="submit" value="Edit">
     </form>
 
     <form action="/cars/<%= car._id %>?_method=DELETE" method='POST'>
-        <input type="submit" value="Delete">
+        <input class="submit-button" type="submit" value="Delete">
     </form>
     
     <img src="<%= car.img %> " alt="<%= car.name %> ">
