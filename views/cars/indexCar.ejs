@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/nav.ejs') %> 
     <h1>Car Index</h1>
-    <ul>
+    <ul class='index'>
         <% for(let i = 0; i < cars.length; i++ ) { %> 
                 <li><a href="/cars/<%= cars[i]._id %>" ><%= cars[i].name %> </a>
                 </li>

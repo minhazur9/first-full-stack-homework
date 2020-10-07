@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/main.css" />
     <title><%= car.name %> </title>
 </head>
-<body>
-    <%- include('../partials/nav.ejs') %> 
-    <h1><%= car.name %> </h1>
-    <h3><strong>Name:</strong> <%= car.name %></h3>
-    <h3><strong>Color:</strong> <%= car.color %></h3>
-    <h3><strong>Year:</strong> <%= car.year %></h3>
-    <h3><strong>Price:</strong> $<%= car.price %></h3>
-    <form action="/cars/<%= car._id %>/edit" method='GET'>
-        <input class="submit-button" type="submit" value="Edit">
-    </form>
 
-    <form action="/cars/<%= car._id %>?_method=DELETE" method='POST'>
-        <input class="submit-button" type="submit" value="Delete">
-    </form>
-    
-    <img src="<%= car.img %> " alt="<%= car.name %> ">
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1><%= car.name %> </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3><strong>Name:</strong> <%= car.name %></h3>
+            </div>
+            <div class="col-sm-6">
+                <h3><strong>Color:</strong> <%= car.color %></h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3><strong>Year:</strong> <%= car.year %></h3>
+            </div>
+            <div class="col-sm-6">
+                <h3><strong>Price:</strong> $<%= car.price %></h3>
+            </div>
+        </div>
+    </div>
+    <div class="submit-button">
+        <form action="/cars/<%= car._id %>/edit" method='GET'>
+            <input type="submit" value="Edit">
+        </form>
+
+        <form action="/cars/<%= car._id %>?_method=DELETE" method='POST'>
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+
+    <img src="<%= car.img %> " alt="<%= car.name %>" class="show-img">
 
 </body>
+
 </html>
