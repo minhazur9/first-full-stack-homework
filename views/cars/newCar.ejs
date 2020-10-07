@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/main.css" />
     <title>New</title>
 </head>
+
 <body>
-    <%- include('./partials/nav.ejs') %> 
+    <%- include('../partials/nav.ejs') %>
     <h1>New Car</h1>
     <form action="/cars" method="POST">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-        </div>
+        <div class="add-form">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
 
-        <div>
-            <label for="color">Color</label>
-            <input type="text" id="color" name="color">
-        </div>
+            <div>
+                <label for="color">Color</label>
+                <input type="text" id="color" name="color">
+            </div>
 
-        <div>
-            <label for="year">Year</label>
-            <input type="text" id="year" name="year">
-        </div>
+            <div>
+                <label for="year">Year</label>
+                <input type="text" id="year" name="year">
+            </div>
 
-        <div>
-            <label for="price">Price</label>
-            <input type="text" id="price" name="price">
-        </div>
+            <div>
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price">
+            </div>
 
-        <div>
-            <label for="img">Image URL</label>
-            <input type="text" id="img" name="img">
+            <div>
+                <label for="img">Image URL</label>
+                <input type="text" id="img" name="img">
+            </div>
         </div>
         <input type="submit" value="Add Car">
     </form>
 </body>
+
 </html>

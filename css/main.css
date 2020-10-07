@@ -1,12 +1,16 @@
+:root{
+    --picBorder: solid white 4px;
+}
 * {
     box-sizing: border-box;
 }
 
 html body {
-    background-color: #094086;
+    background-color: #094086 !important;
     min-height: 100vh;
     color:white
 }
+
 
 input {
     background-color:#222222;
@@ -17,6 +21,21 @@ input {
 
 form input{
     margin-top: 10px;
+    margin-left: 5px;
+}
+
+.add-form {
+    width: 200px;
+}
+
+.add-form input {
+    width: 100%;
+}
+
+label {
+    position: static;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 
@@ -26,7 +45,7 @@ li {
 
 
 
-h1 {
+html h1,h2,h3 {
     margin-left: 10px;
 }
 
@@ -38,4 +57,34 @@ img {
 
 .submit-button {
     display:inline;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+
+.title-img {
+    position: absolute;
+    min-width: 50%;
+    left: 25%;
+    border: var(--picBorder);
+    margin-left: 22px;
+}
+
+.banner{
+    position: absolute;
+    margin-left: 27px;
+}
+
+.title-subimg-left {
+    max-width: 25%;
+    border: var(--picBorder);
+}
+
+.title-subimg-right {
+    margin-left: 1150px;
+    max-width: 333px;
+    border: var(--picBorder);
 }

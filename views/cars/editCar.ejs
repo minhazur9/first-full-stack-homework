@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="main.css" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <title>Edit</title>
 </head>
 <body>
-    <%- include('./partials/nav.ejs') %> 
+    <%- include('../partials/nav.ejs') %> 
     <h1>Edit <%= car.name %> </h1>
     <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
         <div>
