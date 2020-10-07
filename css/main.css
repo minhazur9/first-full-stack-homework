@@ -8,9 +8,8 @@
 html body {
     background-color: #094086 !important;
     min-height: 100vh;
-    color:white
+    color:white;
 }
-
 
 input {
     background-color:#222222;
@@ -100,4 +99,9 @@ img {
     border: var(--picBorder);
     left: 500px;
     bottom: 100px;
+}
+
+html footer {
+    position: absolute;
+    bottom:0;
 }
