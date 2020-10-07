@@ -2,17 +2,21 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #094086 !important;
+html body {
+    background-color: #094086;
     min-height: 100vh;
-    color:white !important
+    color:white
 }
 
 input {
-    background-color:black;
+    background-color:#222222;
     border-radius: 5px;
     min-height: 35px;
     min-width: 40px;
+}
+
+form input{
+    margin-top: 10px;
 }
 
 
